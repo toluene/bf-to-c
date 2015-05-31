@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat $1 | mainbftoc >> "$2.c"
+gcc "$2.c" -o $2
