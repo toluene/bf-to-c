@@ -5,5 +5,9 @@ all: main.pl
 	echo "+" | $(CC) $(FLAGS) -o mainbftoc -c main.pl >> /dev/null
 
 install: mainbftoc
-	cp mainbftoc /usr/bin/mainbftoc
-	cp bftoc /usr/bin/bftoc
+	install mainbftoc /usr/bin/mainbftoc
+	install bftoc /usr/bin/bftoc
+	install bfc /usr/bin/bfc
+
+clean:
+	rm mainbftoc

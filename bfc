@@ -1,0 +1,4 @@
+#!/bin/bash
+bftoc $1 $2
+gcc "$2.c" -o $2
+rm "$2.c"
