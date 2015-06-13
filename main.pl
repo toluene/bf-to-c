@@ -23,7 +23,7 @@ strip([X | Y], [X | Z]) :-
 getCode(X, Y, []) :-
     codeGenerator(succ(0), X,
     "#include <stdio.h>\n\nint main(void) {\n\tchar t[30000] = {0};\n\c
-    \tunsigned short i = 0;\n", Y).
+    \tregister unsigned short i = 0;\n", Y).
 getCode(X, Y, Z) :-
     append("#include <stdio.h>\n\nint main(void) {\n\tchar t[", Z, A),
     append(A, "] = {0};\n\tunsigned short i = 0;\n", B),
